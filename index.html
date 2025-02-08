@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apontamento de Horas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="logo-container">
+    <img src="img/logo_mb.jpeg" alt="Logo da Empresa" class="logo">
+</div>
+    <div class="container">
+        <h1>Apontamento de Horas</h1>
+        <div id="atividades-container">
+            <div class="atividade">
+                <div class="form-group">
+                    <label class="required" for="atividade">Atividade:</label>
+                    <input type="text" class="input-field atividade-input" placeholder="Digite a atividade">
+                    <label for="jira-task">Nº Task Jira:</label>
+                    <input type="text" class="input-field jira-input" placeholder="Ex: SPEUR-3">
+                    <label class="required" for="tempo">Tempo:</label>
+                    <input type="text" class="input-field tempo-input" placeholder="00:00" maxlength="5" onblur="completarTempo(this); atualizarContador();" onkeypress="validaHoras(this, event)" inputmode="numeric" pattern="[0-9]*">
+                    <button class="btn-excluir" onclick="excluirAtividade(this)">Excluir</button>
+                </div>
+            </div>
+        </div>
+        <button id="add-atividade" class="btn btn-secondary">+ Adicionar Atividade</button>
+        <button id="gerar-btn" class="btn btn-primary">Gerar Relatório</button>
+        <div id="resultado"></div>
+        <div id="total-horas">
+            <strong>Total de horas: </strong><span id="total">0:00</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
