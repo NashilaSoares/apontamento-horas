@@ -7,7 +7,7 @@ document.getElementById("add-atividade").addEventListener("click", function() {
             <label class="required" for="atividade">Atividade:</label>
             <input type="text" class="input-field atividade-input" placeholder="Digite a atividade">
             <label for="jira-task">Nº Task Jira:</label>
-            <input type="text" class="input-field jira-input" placeholder="Opcional: CONSIG-123">
+            <input type="text" class="input-field jira-input" placeholder="Ex: EUR-397">
             <label class="required" for="tempo">Tempo:</label>
             <input type="text" class="input-field tempo-input" placeholder="00:00" maxlength="5" onblur="completarTempo(this); atualizarContador();" onkeypress="validaHoras(this, event)" inputmode="numeric" pattern="[0-9]*">
             <button class="btn-excluir" onclick="excluirAtividade(this)">Excluir</button>
