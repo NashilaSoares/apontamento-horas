@@ -73,6 +73,8 @@ function completarTempo(input) {
 
 function atualizarContador() {
     var totalMinutos = 0;
+
+    // Soma todos os minutos das entradas
     document.querySelectorAll(".tempo-input").forEach(function(input) {
         var tempo = input.value;
         if (tempo) {
@@ -83,8 +85,25 @@ function atualizarContador() {
         }
     });
 
+    // Converte para horas e minutos
     var horasTotais = Math.floor(totalMinutos / 60);
     var minutosTotais = totalMinutos % 60;
+
+    // Atualiza campo no formato hh:mm
     document.getElementById("total").innerText = `${horasTotais}:${minutosTotais.toString().padStart(2, '0')}`;
+
+    // Converte para decimal e atualiza campo decimal
+    var horasDecimais = (totalMinutos / 60).toFixed(2).replace('.', ',');
+    var spanDecimal = document.getElementById("total-decimal");
+    if (spanDecimal) {
+        spanDecimal.innerText = horasDecimais;
+    }
 }
+
+
+
+
+
+
+
 

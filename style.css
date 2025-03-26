@@ -146,12 +146,28 @@ label.required::after {
 }
 
 #total-horas {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
-    padding: 15px;
+    padding: 5px;
+    width: 150px;
     background-color: #f1f1f1;
     border: 1px solid #ccc;
     border-radius: 5px;
     color: #333;
     font-weight: bold;
     text-align: center;
+    font-size: 15px;
+}
+
+#total-horas-decimal {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #a0e2b0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+   
 }
